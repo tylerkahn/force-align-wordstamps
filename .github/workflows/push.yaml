@@ -7,6 +7,7 @@ on:
     inputs:
       model_name:
         description: 'Enter the model name, like "alice/bunny-detector". If unset, this will default to the value of `image` in cog.yaml.'
+        default: "cureau/force-align-wordstamps"
   # # Uncomment these lines to trigger the workflow on every push to the main branch
   # push:
   #   branches:

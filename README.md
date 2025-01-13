@@ -14,7 +14,8 @@ If your audio is extremely clean (e.g., AI-generated), you can use a lighter wei
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
-  - [Installation](#installation)
+    - [Inference](#inference)
+  - [Self-hosted Installation](#self-hosted-installation)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
   - [Usage](#usage)
@@ -37,7 +38,13 @@ If your audio is extremely clean (e.g., AI-generated), you can use a lighter wei
 - **Probability Scores:** Optionally display word-level probability scores.
 - **Flexible Inputs:** Supports various input configurations, including specifying language and transcript text.
 
-## Installation
+### Inference
+
+Use the [Replicate](https://replicate.com/cureau/force-align-wordstamps) model as-is.
+
+[![Replicate](https://replicate.com/cureau/force-align-wordstamps/badge)](https://replicate.com/cureau/force-align-wordstamps)
+
+## Self-hosted Installation
 
 ### Prerequisites
 
@@ -46,27 +53,27 @@ If your audio is extremely clean (e.g., AI-generated), you can use a lighter wei
 
 ### Setup
 
-1. **Clone the Repository**
+**Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/crone-ai/force-align-wordstamps
    cd your-repo-name
    ```
 
-2. **Create a Virtual Environment**
+**Create a Virtual Environment**
 
    ```bash
    python3.12 -m venv venv
    source venv/bin/activate
    ```
 
-3. **Install Dependencies**
+**Install Dependencies**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Install Cog**
+**Install Cog**
 
    Follow the [Cog installation guide](https://cog.run/docs/introduction) to install Cog and set it up if using replicate, or deploying to a containerized environment.
 
