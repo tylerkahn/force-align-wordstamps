@@ -1,0 +1,5 @@
+venv/
+.cog/
+__pycache__/
+.DS_Store
+result.log
