@@ -46,7 +46,7 @@ class Predictor(BasePredictor):
 
     def predict(
         self,
-        audio_file: Path = Input(description="Input audio file")),
+        audio_file: Path = Input(description="Input audio file"),
         transcript: str = Input(description="Transcript text"),
         language: str = Input(description="Language", default="en"),
         show_probabilities: bool = Input(description="Show probabilities", default=False)
