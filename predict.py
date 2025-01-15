@@ -29,8 +29,10 @@ def extract_flat_array(json_data, show_probabilities=False):
                             "word": word,
                             "start": word_info.get("start", 0),
                             "end": word_info.get("end", 0),
-                            "probability": word_info.get("probability", 0) if show_probabilities else None,
                         }
+                        # Conditionally add 'probability' key
+                        if show_probabilities:
+                            word_dict["probability"] = word_info.get("probability", 0)
                         # Append the dictionary to the result list
                         result.append(word_dict)
         
@@ -65,4 +67,4 @@ class Predictor(BasePredictor):
         flat_array = extract_flat_array(result.to_dict(), show_probabilities)
 
         # Return the result as a dictionary
-        return {"output": flat_array}
+        return flat_array
