@@ -145,18 +145,14 @@ The primary functionality is encapsulated in the `predict.py` file, which define
 Here's a simple example of how to use the predictor:
 
 ```bash
-cog predict \
---audio_file "audio.mp3" \
---transcript "Sample transcript text." \
---language "en" \
---show_probabilities
+cog predict -i audio_file=@audio.mp3 -i transcript="On that road we heard the song of morning stars; we drank in fragrances aerial and sweet as a May mist; we were rich in gossamer fancies and iris hopes; our hearts sought and found the boon of dreams; the years waited beyond and they were very fair; life was a rose-lipped comrade with purple flowers dripping from her fingers."
 ```
 
 ** Response:
 
 ```json
 {
-  "output": [
+  "words": [
     {
       "word": "On",
       "start": 0,

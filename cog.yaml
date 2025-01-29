@@ -8,14 +8,13 @@ build:
   system_packages:
     - "ffmpeg"
 
-
   # a list of ubuntu apt packages to install
   # system_packages:
   #   - "libgl1-mesa-glx"
   #   - "libglib2.0-0"
 
   # python version in the form '3.11' or '3.11.4'
-  python_version: "3.12.5"
+  python_version: "3.11"
   python_packages:
     - "torch==2.3.1"
     - "git+https://github.com/jianfch/stable-ts.git"

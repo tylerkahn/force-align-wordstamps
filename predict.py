@@ -50,7 +50,7 @@ class Predictor(BasePredictor):
         self,
         audio_file: Path = Input(description="Input audio file"),
         transcript: str = Input(description="Transcript text"),
-        language: str = Input(description="Language", default="en"),
+        language: str = Input(description="Language", default="English"),
         show_probabilities: bool = Input(description="Show probabilities", default=False)
     ) -> dict:
         """Run prediction on the audio file and return the JSON data"""
@@ -67,4 +67,4 @@ class Predictor(BasePredictor):
         flat_array = extract_flat_array(result.to_dict(), show_probabilities)
 
         # Return the result as a dictionary
-        return flat_array
+        return {"wordstamps": flat_array}  # Wrap the list in a dictionary
