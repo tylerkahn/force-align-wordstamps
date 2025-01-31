@@ -50,7 +50,6 @@ class Predictor(BasePredictor):
         self,
         audio_file: Path = Input(description="Input audio file"),
         transcript: str = Input(description="Transcript text"),
-        language: str = Input(description="Language", default="English"),
         show_probabilities: bool = Input(description="Show probabilities", default=False)
     ) -> dict:
         """Run prediction on the audio file and return the JSON data"""
@@ -59,8 +58,8 @@ class Predictor(BasePredictor):
             result = self.model.transcribe(str(audio_file))
         else:
             # Perform alignment
-            aligned_result = self.model.align(str(audio_file), transcript, language=language)
-            aligned_words = self.model.align_words(str(audio_file), aligned_result, language)
+            aligned_result = self.model.align(str(audio_file), transcript, 'en')
+            aligned_words = self.model.align_words(str(audio_file), aligned_result, 'English')
             result = self.model.refine(str(audio_file), aligned_words)
 
         # Extract flat array from JSON output
