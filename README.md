@@ -1,5 +1,7 @@
 # Force align transcript to audio
 
+Forked cog from [cureau/force-align-wordstamps](https://replicate.com/cureau/force-align-wordstamps) in order to run on an A100. Also added the ability to specify an alignment language other than English.
+
 ## Introduction
 
 WhisperX provides word-level timestamps for audio files, but often you'll need to "force align" audio **perfectly** to source-of-truth transcript text. This capability is offered by [stable-ts](https://github.com/jianfch/stable-ts).
